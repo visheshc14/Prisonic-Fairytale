@@ -1,0 +1,1 @@
+<script defer type="text/javascript" src="<%= Routes.static_path(@conn, "/js/game.js") %>"></script>

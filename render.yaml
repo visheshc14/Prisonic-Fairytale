@@ -1,0 +1,54 @@
+# Experimental Ignorance 
+services:
+  # A Docker web service
+  - type: web
+    name: webdis
+    env: prisonic-fairytale
+    repo: https://github.com/visheshc14/Prisonic-Fairytale # optional
+    region: oregon # optional (defaults to oregon)
+    plan: standard # optional (defaults to starter)
+    branch: master # optional (uses repo default)
+    dockerCommand: ./Dockerfile # optional (defaults to Dockerfile command)
+    numInstances: 3 # optional (defaults to 1)
+    healthCheckPath: /
+    envVars:
+      - key: REDIS_HOST
+        fromService:
+          name: redis
+          type: pserv
+          property: host # available properties are listed below
+      - key: REDIS_PORT
+        fromService:
+          name: redis
+          type: pserv
+          property: port
+      - fromGroup: conc-settings
+      
+databases:
+  - name: elephant
+    databaseName: mydb # optional (Render may add a suffix)
+    user: vishesh # optional
+    ipAllowList: # optional (defaults to allow all)
+      - source: 203.0.113.4/30
+        description: office
+      - source: 198.51.100.1
+        description: home
+
+  - name: private database
+    databaseName: private
+    ipAllowList: [] # only allow internal connections
+
+envVarGroups:
+  - name: conc-settings
+    envVars:
+      - key: CONCURRENCY
+        value: 2
+      - key: SECRET
+        generateValue: true
+      - key: USER_PROVIDED_SECRET
+        sync: false
+  - name: stripe
+    envVars:
+      - key: STRIPE_API_URL
+        value: https://api.stripe.com/v2
+    

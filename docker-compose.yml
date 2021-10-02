@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  db:
+    restart: always
+    image: postgres:12-alpine
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=mmo_dev
+    ports:
+      - 5434:5432
+
+  web:
+    restart: always
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - 6632:4000
