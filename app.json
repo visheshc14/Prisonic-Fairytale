@@ -1,0 +1,8 @@
+{
+  "name": "Prisonic_Fairytale",
+  "description": "ChronoTrigger's Bad Clone With Massively Multiplayer Online Functionality Built With Godot Engine, Elixir & Docker",
+  "image": "joshwlewis/docker-heroku-phoenix:latest",
+  "addons": [
+    "heroku-postgresql"
+  ]
+}
