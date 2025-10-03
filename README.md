@@ -1,5 +1,5 @@
 # Prisonic Fairytale
-Prisonic Fairytale - ChronoTrigger's Bad Clone With Massively Multiplayer Online Functionality Built With Godot Engine, Elixir & Docker. Upcoming Blog on Xen About The Making of Prisonic- Fairytale (Yet to Be Deployed). Prisonic Fairytale Name is Derived From Silent Hill - 2 Original Soundtrack - Prisonic Fairytale. [`Apple Music`](https://music.apple.com/gb/album/prisonic-fairytale/164069102?i=164070583).
+A Massively Multiplayer Online RPG Inspired by The Classic Style of Chrono Trigger, Developed Using the Godot Engine for The Game Client, Elixir for Highly Concurrent Backend Infrastructure, and Docker for Scalable Deployment. Unlike Typical Clones, This Project Emphasizes a Retro Aesthetic While Supporting Real-Time Multiplayer Gameplay and World Persistence, Powered by Elixir’s Fault-Tolerant Architecture. It Reimagines SNES-era RPG Charm with Modern Distributed Systems for Seamless, Large-Scale Player Interaction. Prisonic Fairytale Name is Derived From Silent Hill - 2 Original Soundtrack - Prisonic Fairytale. [`Apple Music`](https://music.apple.com/gb/album/prisonic-fairytale/164069102?i=164070583).
 
 Few Snapshots -
 
